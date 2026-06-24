@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Operation Relentless photo gallery — convoys, benefits, tributes, off-road runs, team events, and more from the Deer Park, TX veteran community." />
+  <title>Gallery | Operation Relentless</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Gallery lightbox overlay */
+    .lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(7,13,20,0.95); z-index: 999;
+      align-items: center; justify-content: center;
+      padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner { max-width: 900px; width: 100%; position: relative; }
+    .lightbox-close {
+      position: absolute; top: -2.5rem; right: 0;
+      background: none; border: none; color: var(--cream);
+      font-size: 1.5rem; cursor: pointer; font-family: var(--font-display);
+      letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem;
+    }
+    .lightbox-img {
+      width: 100%; max-height: 75vh; object-fit: contain; border-radius: 4px;
+    }
+    .lightbox-caption {
+      font-family: var(--font-display); font-size: 0.8rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--tan); text-align: center; margin-top: 1rem;
+    }
+    /* Gallery items clickable */
+    .gallery-item { cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <!-- CRISIS BAR -->
+  <div class="crisis-bar" role="banner" aria-label="Veterans Crisis Line">
+    <strong>Veterans Crisis Line:</strong> Dial <a href="tel:988">988</a>, Press&nbsp;1 &nbsp;·&nbsp; Text <a href="sms:838255">838255</a> &nbsp;·&nbsp; Chat at <a href="https://www.veteranscrisisline.net" target="_blank" rel="noopener">VeteransCrisisLine.net</a>
+  </div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo" aria-label="Operation Relentless Home">
+        <div class="logo-mark"><span>OR</span></div>
+        <div class="logo-text">
+          <span class="name">Operation Relentless</span>
+          <span class="tagline">Deer Park, TX &nbsp;·&nbsp; 501(c)(3)</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="programs.html" class="nav-link">What We Do</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="membership.html" class="nav-link">Membership</a>
+        <a href="volunteer.html" class="nav-link">Volunteer</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="donate.html" class="nav-link donate-btn">Donate</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="programs.html" class="nav-link">What We Do</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="membership.html" class="nav-link">Membership</a>
+      <a href="volunteer.html" class="nav-link">Volunteer</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="donate.html" class="donate-btn">Donate Now</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Gallery</nav>
+        <div class="section-label">In the Field</div>
+        <h1>Gallery</h1>
+        <p class="hero-sub">Convoys, benefits, tributes, and the people who make the mission real.</p>
+      </div>
+    </section>
+
+    <!-- NOTICE: Photos pending -->
+    <section class="section-sm section-surface" aria-label="Gallery notice">
+      <div class="container-sm">
+        <div class="notice olive reveal" style="text-align:center;">
+          📸 <strong>Photo Gallery Under Construction:</strong> Real mission photos will populate this grid as events are captured and approved. Placeholders below indicate what each slot will hold.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         GALLERY — CONVOY SECTION
+         ================================================ -->
+    <section class="section topo-bg" aria-label="Convoy gallery">
+      <div class="container">
+
+        <div style="margin-bottom:2.5rem;">
+          <div class="section-label reveal">Humvee Convoys &amp; Off-Road</div>
+          <h2 class="reveal reveal-delay-1" style="font-size:1.6rem;">On the Trail</h2>
+        </div>
+
+        <div class="gallery-grid" style="margin-bottom:4rem;">
+          <div class="gallery-item reveal" role="img" aria-label="Convoy lead vehicle placeholder">
+            <div class="gallery-icon" aria-hidden="true">🚙</div>
+            <span class="gallery-label">Convoy Lead Vehicle</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-1" role="img" aria-label="Off-road formation placeholder">
+            <div class="gallery-icon" aria-hidden="true">🏔️</div>
+            <span class="gallery-label">Off-Road Formation</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-2" role="img" aria-label="Humvee fleet placeholder">
+            <div class="gallery-icon" aria-hidden="true">🚗</div>
+            <span class="gallery-label">The Humvee Fleet</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-3" role="img" aria-label="Trail dust action shot placeholder">
+            <div class="gallery-icon" aria-hidden="true">💨</div>
+            <span class="gallery-label">Dust & Diesel</span>
+          </div>
+          <div class="gallery-item reveal" role="img" aria-label="Convoy crew portrait placeholder">
+            <div class="gallery-icon" aria-hidden="true">👥</div>
+            <span class="gallery-label">Convoy Crew</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-1" role="img" aria-label="Yellowstone roundup placeholder">
+            <div class="gallery-icon" aria-hidden="true">🌵</div>
+            <span class="gallery-label">Yellowstone Roundup</span>
+          </div>
+        </div>
+
+        <!-- Benefit Events -->
+        <div style="margin-bottom:2.5rem;">
+          <div class="section-label reveal">Benefit Events</div>
+          <h2 class="reveal reveal-delay-1" style="font-size:1.6rem;">Community in Action</h2>
+        </div>
+
+        <div class="gallery-grid" style="margin-bottom:4rem;">
+          <div class="gallery-item reveal" role="img" aria-label="BBQ benefit event placeholder">
+            <div class="gallery-icon" aria-hidden="true">🍖</div>
+            <span class="gallery-label">BBQ Benefit 2025</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-1" role="img" aria-label="Benefit crowd placeholder">
+            <div class="gallery-icon" aria-hidden="true">🎉</div>
+            <span class="gallery-label">Community Turnout</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-2" role="img" aria-label="Silent auction placeholder">
+            <div class="gallery-icon" aria-hidden="true">🏷️</div>
+            <span class="gallery-label">Silent Auction</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-3" role="img" aria-label="Navy veteran family benefit placeholder">
+            <div class="gallery-icon" aria-hidden="true">⚓</div>
+            <span class="gallery-label">Navy Veteran Family</span>
+          </div>
+        </div>
+
+        <!-- Tributes & Ceremonies -->
+        <div style="margin-bottom:2.5rem;">
+          <div class="section-label reveal">Tributes &amp; Ceremonies</div>
+          <h2 class="reveal reveal-delay-1" style="font-size:1.6rem;">Honoring Those Who Served</h2>
+        </div>
+
+        <div class="gallery-grid" style="margin-bottom:4rem;">
+          <div class="gallery-item reveal" role="img" aria-label="Vietnam veteran tribute placeholder">
+            <div class="gallery-icon" aria-hidden="true">🎖️</div>
+            <span class="gallery-label">Vietnam Tribute 2025</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-1" role="img" aria-label="VFW color guard placeholder">
+            <div class="gallery-icon" aria-hidden="true">🚩</div>
+            <span class="gallery-label">VFW Color Guard</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-2" role="img" aria-label="Ceremony moment placeholder">
+            <div class="gallery-icon" aria-hidden="true">🌟</div>
+            <span class="gallery-label">Ceremony Moment</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-3" role="img" aria-label="Gold Star family moment placeholder">
+            <div class="gallery-icon" aria-hidden="true">⭐</div>
+            <span class="gallery-label">Gold Star Families</span>
+          </div>
+        </div>
+
+        <!-- The Team -->
+        <div style="margin-bottom:2.5rem;">
+          <div class="section-label reveal">The Team</div>
+          <h2 class="reveal reveal-delay-1" style="font-size:1.6rem;">The People Behind the Mission</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal" role="img" aria-label="Leadership team photo placeholder">
+            <div class="gallery-icon" aria-hidden="true">👑</div>
+            <span class="gallery-label">Leadership Team</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-1" role="img" aria-label="Volunteer crew placeholder">
+            <div class="gallery-icon" aria-hidden="true">🤝</div>
+            <span class="gallery-label">Volunteer Crew</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-2" role="img" aria-label="Team convoy shot placeholder">
+            <div class="gallery-icon" aria-hidden="true">🛻</div>
+            <span class="gallery-label">Team Convoy Shot</span>
+          </div>
+          <div class="gallery-item reveal reveal-delay-3" role="img" aria-label="Community gathering placeholder">
+            <div class="gallery-icon" aria-hidden="true">🫂</div>
+            <span class="gallery-label">Community Gathering</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SUBMIT PHOTOS CTA -->
+    <section class="section section-surface" aria-label="Submit photos">
+      <div class="container-sm" style="text-align:center;">
+        <div class="section-label reveal" style="justify-content:center;">Share the Mission</div>
+        <h2 class="reveal reveal-delay-1">Were You There? Share Your Photos</h2>
+        <p class="reveal reveal-delay-2" style="color:rgba(239,235,225,0.65);max-width:54ch;margin:0.75rem auto 2rem;line-height:1.7;">
+          If you've attended an Operation Relentless event and captured the moment, we'd love to include your photos in this gallery. Reach out through our contact page.
+        </p>
+        <div class="reveal reveal-delay-3" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-outline">Submit Your Photos</a>
+          <a href="events.html" class="btn btn-red">Attend an Event</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox (for when real photos are added) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">✕ Close</button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-crisis" aria-label="Veterans Crisis Line">
+        🇺🇸 <strong>Veterans Crisis Line</strong> — Dial <strong>988</strong>, Press <strong>1</strong> &nbsp;·&nbsp; Text <strong>838255</strong> &nbsp;·&nbsp; Available 24/7, Free &amp; Confidential
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--cream);letter-spacing:0.08em;text-transform:uppercase;">Operation Relentless</div>
+          <p>A 501(c)(3) nonprofit serving veterans, active-duty service members, military spouses, and Gold Star families in Deer Park, TX and beyond.<br><em style="color:rgba(203,185,148,0.5);font-size:0.82rem;">EIN: [EIN Placeholder]</em></p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">[FB]</a>
+            <a href="#" class="social-link" aria-label="Instagram">[IG]</a>
+            <a href="#" class="social-link" aria-label="YouTube">[YT]</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">[X]</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigate</h4><ul><li><a href="about.html">About Us</a></li><li><a href="programs.html">What We Do</a></li><li><a href="events.html">Events</a></li><li><a href="membership.html">Membership</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="programs.html">Peer Support</a></li><li><a href="programs.html#prevention">Suicide Prevention</a></li><li><a href="programs.html#outreach">Community Outreach</a></li><li><a href="donate.html">Donate</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">Deer Park, TX</a></li><li><a href="mailto:info@operationrelentless.org">[Email Placeholder]</a></li><li><a href="tel:+">[Phone Placeholder]</a></li><li><a href="contact.html">Send a Message</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Operation Relentless, Inc. All rights reserved. 501(c)(3) Nonprofit &nbsp;·&nbsp; EIN: [EIN Placeholder] &nbsp;·&nbsp; Deer Park, TX</p>
+        <p>Donations are tax-deductible to the extent allowed by law.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Lightbox for real photos (no-op while placeholders are active)
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.parentElement.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = img.dataset.caption || img.alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        lightboxClose.focus();
+      });
+    });
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      });
+    }
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
