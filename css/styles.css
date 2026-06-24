@@ -332,13 +332,30 @@ p  { font-size: 1rem; }
 .mobile-nav .nav-link:hover { color: var(--cream); }
 .mobile-nav .donate-btn {
   display: block; margin-top: 0.75rem;
-  background: var(--red); color: #fff !important;
-  text-align: center; padding: 0.75rem;
+  background: linear-gradient(135deg, var(--orange-hot), var(--orange));
+  color: #fff !important;
+  text-align: center; padding: 0.85rem;
   border-radius: 4px; font-family: var(--font-display);
   font-size: 0.95rem; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
 }
-.mobile-nav .donate-btn:hover { background: var(--red-dark); }
+.mobile-nav .donate-btn:hover {
+  background: linear-gradient(135deg, #FF8C30, var(--orange-hot));
+}
+.mobile-nav .member-btn {
+  display: block; margin-top: 0.5rem;
+  background: linear-gradient(135deg, #2655D4, var(--navy-surf));
+  color: #fff !important;
+  text-align: center; padding: 0.85rem;
+  border-radius: 4px; font-family: var(--font-display);
+  font-size: 0.95rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border-bottom: none;
+}
+.mobile-nav .member-btn:hover {
+  background: linear-gradient(135deg, #3466E0, #2655D4);
+  color: #fff;
+}
 
 /* =======================================================
    BUTTONS
@@ -1274,6 +1291,10 @@ h1, h2, h3, h4, h5, h6 { color: #fff; }
 }
 
 @media (max-width: 768px) {
+  /* ── Body ── */
+  body { overflow-x: hidden; }
+
+  /* ── Header ── */
   .site-nav, .site-nav-left, .site-nav-right { display: none; }
   .hamburger { display: flex; }
   .header-inner {
@@ -1281,37 +1302,85 @@ h1, h2, h3, h4, h5, h6 { color: #fff; }
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 64px;
   }
   .hamburger {
     position: absolute;
     right: 1rem;
   }
   .logo-img {
-    height: 72px;
+    height: 68px;
     margin-top: 0;
     margin-bottom: 0;
     transform: none;
   }
+
+  /* ── Grids / Layout ── */
   .grid-2,
   .grid-3,
   .grid-4 { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
+
+  /* ── Cards ── */
   .event-card { flex-direction: column; }
   .event-date { width: 100%; flex-direction: row; gap: 0.75rem; padding: 0.5rem 1rem; }
+
+  /* ── Footer ── */
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-brand { grid-column: auto; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .hero { min-height: 85vh; }
-  .hero-content { padding: 5rem 1.25rem 4rem; }
-  .section { padding: 3.5rem 1.25rem; }
-  .section-sm { padding: 2.5rem 1.25rem; }
+
+  /* ── Hero ── */
+  .hero { min-height: 72vh; }
+  .hero-content { padding: 4.5rem 1.25rem 3.5rem; }
+  .hero-btns { flex-direction: column; align-items: stretch; }
+  .hero-btns .btn { text-align: center; justify-content: center; }
+
+  /* ── Sections ── */
+  .section { padding: 3rem 1.25rem; }
+  .section-sm { padding: 2rem 1.25rem; }
+
+  /* ── Donate ── */
   .amount-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Forms — prevent iOS zoom (16px min) ── */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  /* ── Map ── */
+  .site-map-section { height: 220px; }
+
+  /* ── Sticky CTAs ── */
+  .sticky-cta { padding: 0.55rem 0.9rem; font-size: 0.75rem; bottom: 1rem; }
+  .sticky-cta-donate { right: 0.85rem; }
+  .sticky-cta-member { left: 0.85rem; }
+
+  /* ── Misc ── */
   .logo-text .tagline { display: none; }
 }
 
 @media (max-width: 480px) {
+  /* ── Typography ── */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.65rem; }
+
+  /* ── Buttons ── */
   .btn { padding: 0.72rem 1.2rem; font-size: 0.8rem; }
-  .btn-lg { padding: 0.85rem 1.5rem; font-size: 0.9rem; }
-  .hero-btns { flex-direction: column; align-items: flex-start; }
-  h1 { font-size: 2.2rem; }
+  .btn-lg { padding: 0.85rem 1.5rem; font-size: 0.88rem; }
+
+  /* ── Sections ── */
+  .section { padding: 2.5rem 1rem; }
+  .section-sm { padding: 1.75rem 1rem; }
+  .hero-content { padding: 3rem 1rem 2.5rem; }
+
+  /* ── Donate ── */
+  .amount-grid { grid-template-columns: 1fr; }
+
+  /* ── Sticky CTAs — icon only ── */
+  .sticky-cta { font-size: 0; padding: 0; width: 48px; height: 48px;
+    border-radius: 50%; justify-content: center; bottom: 0.75rem; }
+  .sticky-cta .sticky-icon { font-size: 1.3rem; }
+  .sticky-cta-donate { right: 0.75rem; }
+  .sticky-cta-member { left: 0.75rem; }
 }
