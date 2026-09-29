@@ -88,6 +88,9 @@ button { font-family: inherit; }
 :root {
   --topo-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='600'%3E%3Cg fill='none' stroke='rgba(255%2C255%2C255%2C0.07)' stroke-width='1.4'%3E%3Cpath d='M-100%2C55 C60%2C35 220%2C75 420%2C50 S680%2C30 950%2C55'/%3E%3Cpath d='M-100%2C135 C60%2C115 220%2C155 420%2C130 S680%2C110 950%2C135'/%3E%3Cpath d='M-100%2C215 C60%2C195 220%2C235 420%2C210 S680%2C190 950%2C215'/%3E%3Cpath d='M-100%2C295 C60%2C275 220%2C315 420%2C290 S680%2C270 950%2C295'/%3E%3Cpath d='M-100%2C375 C60%2C355 220%2C395 420%2C370 S680%2C350 950%2C375'/%3E%3Cpath d='M-100%2C455 C60%2C435 220%2C475 420%2C450 S680%2C430 950%2C455'/%3E%3Cpath d='M-100%2C535 C60%2C515 220%2C555 420%2C530 S680%2C510 950%2C535'/%3E%3C/g%3E%3C/svg%3E");
 }
+
+/* TOPO-BG: Orange gradient base with topographic overlay */
+.topo-bg {
   position: relative;
   /* Orange gradient — never flat */
   background: linear-gradient(145deg,
@@ -1196,6 +1199,48 @@ h1, h2, h3, h4, h5, h6 { color: #fff; }
   background: rgba(255,190,11,0.18); color: #9A6E00;
   border-color: rgba(255,190,11,0.4);
 }
+/* =======================================================
+   MOBILE FIXES — stack event two-column rows on small viewports
+   This overrides inline grid styles used in several event pages
+   so the date column stacks above content and doesn't force overflow.
+   ======================================================= */
+@media (max-width: 760px) {
+  .section.topo-bg .container article > div {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Make the date column compact and inline with the content */
+  .section.topo-bg .container article > div > div:first-child {
+    min-width: auto !important;
+    padding: 1rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.75rem !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  .section.topo-bg .container article > div > div:first-child span {
+    font-size: 0.85rem !important;
+  }
+
+  .section.topo-bg .container article > div > div:first-child span:nth-child(2) {
+    font-size: 2rem !important;
+    line-height: 1 !important;
+  }
+
+  .section.topo-bg .container article > div > div:last-child {
+    padding: 1rem !important;
+  }
+
+  .section.topo-bg .container article > div > div:last-child .event-meta {
+    display: block;
+  }
+
+  .section.topo-bg .container { padding-left: 1rem; padding-right: 1rem; }
+  .section.topo-bg .container article h2 { font-size: 1.25rem; }
+}
 .tag.blue {
   background: rgba(61,139,31,0.12); color: var(--green-hot);
   border-color: rgba(61,139,31,0.35);
@@ -1341,6 +1386,18 @@ h1, h2, h3, h4, h5, h6 { color: #fff; }
   .footer-brand { grid-column: 1 / -1; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .amount-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Collapse inline-style two-col grids on tablet ── */
+  /* Donate page form grid */
+  [style*="grid-template-columns:1.1fr"],
+  [style*="grid-template-columns: 1.1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Contact page form grid */
+  [style*="grid-template-columns:1.2fr"],
+  [style*="grid-template-columns: 1.2fr"] {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1374,9 +1431,39 @@ h1, h2, h3, h4, h5, h6 { color: #fff; }
   .grid-4 { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 
+  /* ── Override ALL inline-style grids that use multi-column on mobile ── */
+  /* Donate page: display:grid;grid-template-columns:1.1fr 0.9fr */
+  [style*="grid-template-columns:1.1fr"],
+  [style*="grid-template-columns: 1.1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  /* Contact page: display:grid;grid-template-columns:1.2fr 0.8fr */
+  [style*="grid-template-columns:1.2fr"],
+  [style*="grid-template-columns: 1.2fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  /* Membership "Why It Matters" 3-col inline grid */
+  [style*="grid-template-columns:repeat(3"],
+  [style*="grid-template-columns: repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+
   /* ── Cards ── */
   .event-card { flex-direction: column; }
   .event-date { width: 100%; flex-direction: row; gap: 0.75rem; padding: 0.5rem 1rem; }
+
+  /* ── Donate toggle — wrap on small screens ── */
+  .donate-toggle { flex-wrap: wrap; width: 100%; }
+  .toggle-btn { flex: 1; text-align: center; }
+
+  /* ── Donate submit button — full width ── */
+  [style*="align-self:flex-start"] {
+    align-self: stretch !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
 
   /* ── Footer ── */
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1404,10 +1491,13 @@ h1, h2, h3, h4, h5, h6 { color: #fff; }
   /* ── Map ── */
   .site-map-section { height: 220px; }
 
-  /* ── Sticky CTAs ── */
-  .sticky-cta { padding: 0.55rem 0.9rem; font-size: 0.75rem; bottom: 1rem; }
-  .sticky-cta-donate { right: 0.85rem; }
-  .sticky-cta-member { left: 0.85rem; }
+  /* ── Sticky CTAs — reduce bottom padding so they don't block content ── */
+  .sticky-cta { padding: 0.55rem 0.9rem; font-size: 0.72rem; bottom: 0.75rem; }
+  .sticky-cta-donate { right: 0.6rem; }
+  .sticky-cta-member { left: 0.6rem; }
+
+  /* ── Add bottom padding to main so sticky CTAs don't block last CTA buttons ── */
+  main { padding-bottom: 4rem; }
 
   /* ── Misc ── */
   .logo-text .tagline { display: none; }
@@ -1427,8 +1517,17 @@ h1, h2, h3, h4, h5, h6 { color: #fff; }
   .section-sm { padding: 1.75rem 1rem; }
   .hero-content { padding: 3rem 1rem 2.5rem; }
 
+  /* ── Membership mini-grid: 1-col on smallest screens ── */
+  [style*="grid-template-columns:repeat(3"],
+  [style*="grid-template-columns: repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+
   /* ── Donate ── */
   .amount-grid { grid-template-columns: 1fr; }
+
+  /* ── Crisis bar: smaller on mobile to save space ── */
+  .crisis-bar { font-size: 0.72rem; padding: 0.4rem 0.75rem; }
 
   /* ── Sticky CTAs — icon only ── */
   .sticky-cta { font-size: 0; padding: 0; width: 48px; height: 48px;
