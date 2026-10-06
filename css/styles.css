@@ -800,6 +800,46 @@ h1, h2, h3, h4, h5, h6 { color: #fff; }
   color: var(--tan-40); margin: 0 auto 1rem; text-align: center;
 }
 
+.about-hero-badge {
+  display: block;
+  width: min(84%, 420px);
+  height: auto;
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,0.45));
+  transition: transform var(--tr), filter var(--tr);
+}
+
+.about-hero-badge:hover {
+  transform: translateY(-6px) scale(1.02);
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,0.6));
+}
+
+.team-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  border: 2px solid rgba(255,255,255,0.12);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.18);
+  margin: 0 auto 1rem;
+}
+
+.team-role {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+.team-background {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(239,235,225,0.72);
+}
+
 /* =======================================================
    PROGRAM CARDS
    ======================================================= */
